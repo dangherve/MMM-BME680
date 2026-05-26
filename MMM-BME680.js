@@ -6,7 +6,9 @@ Module.register("MMM-BME680", {
         updateInterval: 30, // Seconds
         tempScaleType: 0, // Celsius
         pressureScaleType: 0, // hPa
-        tempOffset: 1.5 // degrees
+        tempOffset: 1.5, // degrees
+        //deviceAddress
+        venv: ""
     },
 
     // Define start sequence.

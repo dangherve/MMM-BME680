@@ -22,9 +22,10 @@ module.exports = NodeHelper.create({
 			const self = this
 			this.config = payload
 			var deviceAddr = this.config.deviceAddress;
+			var venv = this.config.venv;
 
 			// execute external script
-			exec(`python3 ./modules/MMM-BME680/bme.py ${deviceAddr}`, (error, stdout) => {
+			exec(`${venv}python3 ./modules/MMM-BME680/bme.py ${deviceAddr}`, (error, stdout) => {
 				if (error) {
 					console.error(`exec error: ${error}`);
 					return;
