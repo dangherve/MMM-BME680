@@ -62,12 +62,15 @@ Module.register("MMM-BME680", {
                             suffix = "°F";
                             break;
                     }
+                    color = "red";
                     icon_img = "temperature-high";
                     break;
                 case 1:
                     val = this.humidity;
                     icon_img = "tint";
                     suffix = "%";
+                    color = "blue";
+
                     break;
                 case 2:
                     switch (this.config.pressureScaleType) {
@@ -81,16 +84,19 @@ Module.register("MMM-BME680", {
                             break;
                     }
                     icon_img = "tachometer-alt"; // maybe "wind"
+                    color = "green";
                     break;
                  case 3:
                     val = this.r;
                     suffix = " Ohms";
                     icon_img = "fan" // maybe "fan";
+                    color = "yellow";
                     break;
                  case 4:
                     val = this.iaq;
                     suffix = " %";
                     icon_img = "house-chimney-medical" // maybe "fan";
+                    color = "cyan";
                     break;
            }
 
