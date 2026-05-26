@@ -49,6 +49,7 @@ Module.register("MMM-BME680", {
             var val = "";
             var suffix = "";
             var icon_img = "";
+            var color = "";
 
             switch (i) {
                 case 0:
@@ -115,6 +116,7 @@ Module.register("MMM-BME680", {
             var text_div = document.createElement("div");
             var text = document.createTextNode(" " + val + suffix);
             text_div.className = 'bme-text';
+            text_div.style_color = color;
             text_div.appendChild(text);
 
             var td = document.createElement('td');
